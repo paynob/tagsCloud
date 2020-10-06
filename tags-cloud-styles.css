@@ -1,0 +1,54 @@
+
+.tags-cloud {
+  border: 3px solid black;
+  background: white;
+  font-size: 30px;
+  padding: 8px;
+  color: #66c;
+  word-break: break-word;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.tags-cloud>[data-tag][disabled]{
+  cursor: default;
+}
+.tags-cloud>[data-tag]:not([disabled]):hover{
+  padding-top:0;
+  padding-bottom:0;
+  
+  font-weight: 900;
+  font-size: calc( 1 / 2.25 ) em; /*2.25*/
+  
+  opacity: 1;
+  filter: none;
+  z-index:  9999999;
+  vertical-align: middle;
+}
+.tags-cloud>[data-tag] {
+  border: 1px solid transparent;
+  display: inline-block;
+  font-size: var(--weight);
+  opacity: var(--opacity);
+  cursor: pointer;
+  margin: -0.25em calc(0.65em - 1%);
+  padding: 0em 0.1em;
+  vertical-align: top;
+  display: inline;
+}
+
+.tags-cloud>[data-tag]:nth-child(3n) {
+  vertical-align: bottom;
+  margin: -0.15em calc(0.35em - 1%);
+  margin-top: 0;
+  filter: hue-rotate(40deg);
+}
+
+.tags-cloud>[data-tag]:nth-child(3n+2) {
+  vertical-align: middle;
+  margin: -0.05em calc(0.15em - 1%);
+  margin-bottom: 0;
+  filter: hue-rotate(320deg);
+}
